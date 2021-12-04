@@ -688,12 +688,12 @@ let g:delve_backend = "native"
 
 "Custom Mapping for vimspector
 "let g:vimspector_enable_mappings = 'HUMAN'nmap <leader>vl :call vimspector#Launch()<CR>
-nmap <leader>vr :VimspectorReset<CR>
-nmap <leader>ve :VimspectorEval
-nmap <leader>vw :VimspectorWatch
-nmap <leader>vo :VimspectorShowOutput
-nmap <leader>vi <Plug>VimspectorBalloonEval
-xmap <leader>vi <Plug>VimspectorBalloonEval
+"nmap <leader>vr :VimspectorReset<CR>
+"nmap <leader>ve :VimspectorEval
+"nmap <leader>vw :VimspectorWatch
+"nmap <leader>vo :VimspectorShowOutput
+"nmap <leader>vi <Plug>VimspectorBalloonEval
+"xmap <leader>vi <Plug>VimspectorBalloonEval
 
 " for normal mode - the word under the cursor
 nmap <Leader>di <Plug>VimspectorBalloonEval
@@ -708,6 +708,10 @@ nnoremap <leader>do :call GotoWindow(g:vimspector_session_windows.output)<CR>
 nnoremap <leader>di :call AddToWatch()<CR>
 nnoremap <leader>dx :call vimspector#Reset()<CR>
 nnoremap <leader>dX :call vimspector#ClearBreakpoints()<CR>
+nnoremap <leader>dh :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <leader>de :call vimspector#ToggleConditionalBreakpoint()<CR>
+nnoremap <leader>dn :call vimspector#Continue()<CR>
+nnoremap <leader>drc :call vimspector#RunToCursor()<CR>
 nnoremap <S-k> :call vimspector#StepOut()<CR>
 nnoremap <S-l> :call vimspector#StepInto()<CR>
 nnoremap <S-j> :call vimspector#StepOver()<CR>
